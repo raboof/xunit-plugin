@@ -255,7 +255,7 @@ public class XUnitProcessor implements Serializable {
         if (result != null) {
             TestResultAction action;
             if (existingAction == null) {
-                action = new TestResultAction(build, result, listener);
+                action = new XUnitTestResultAction(build, result, listener);
             } else {
                 action = existingAction;
                 action.setResult(result, listener);

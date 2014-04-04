@@ -76,7 +76,7 @@ public class XUnitPublisher extends Recorder implements DryRun, Serializable {
     public Action getProjectAction(AbstractProject<?, ?> project) {
         JUnitResultArchiver jUnitResultArchiver = project.getPublishersList().get(JUnitResultArchiver.class);
         if (jUnitResultArchiver == null) {
-            return new TestResultProjectAction(project);
+            return new XUnitProjectAction(project);
         }
         return null;
     }
